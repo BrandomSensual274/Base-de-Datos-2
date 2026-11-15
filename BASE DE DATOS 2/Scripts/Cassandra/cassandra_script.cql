@@ -1,0 +1,2 @@
+CREATE KEYSPACE tucanchaya_analitica WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+CREATE TABLE metricas_demanda_horaria (id_cancha int, fecha date, hora text, total_reservas counter, PRIMARY KEY ((id_cancha, fecha), hora));
